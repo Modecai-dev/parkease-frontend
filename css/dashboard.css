@@ -130,6 +130,10 @@ body {
   border: none;
 }
 
+/* progress bar*/
+.progress {
+  height: 6px;
+}
 /* TABLE */
 
 .table-box {
