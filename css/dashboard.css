@@ -1,0 +1,175 @@
+body {
+  background: #f4f7fb;
+  font-family: Segoe UI, sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 220px;
+  /*background:linear-gradient(180deg,#27b4c6,#159db0);*/
+  background-color: #00b4d8;
+  color: white;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h5 {
+  font-weight: 600;
+}
+
+.sidebar small {
+  opacity: 0.7;
+}
+
+.sidebar .nav-link {
+  color: white;
+  opacity: 0.85;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.sidebar .nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* MAIN */
+
+.main {
+  margin-left: 220px;
+  padding: 25px;
+}
+
+/* TOPBAR */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  background: #eef2f6;
+  border-radius: 10px;
+  padding: 8px 15px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+}
+
+/* DASH CARDS */
+
+.card-box {
+  border-radius: 14px;
+  border: 1px solid #e6ebf1;
+  padding: 18px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9f7fb;
+  color: #159db0;
+  font-size: 18px;
+}
+
+.card-title {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.card-value {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* OPERATIONS */
+
+.section-title {
+  font-weight: 600;
+  margin: 25px 0 15px;
+}
+
+.operation-btn {
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: 1px #00b4d8 solid;
+}
+
+.operation-btn:hover {
+  background-color: #00b4d8;
+  border: none;
+}
+
+/* TABLE */
+
+.table-box {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e6ebf1;
+  padding: 20px;
+}
+
+.table thead {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.badge-parked {
+  background: #dff7e8;
+  color: #1c9b5f;
+  font-weight: 500;
+}
+
+.badge-signed {
+  background: #edf0f3;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* FOOTER USER */
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
