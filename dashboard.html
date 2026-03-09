@@ -6,33 +6,34 @@
 
     <title>ParkEase Attendant Dashboard</title>
 
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Icons -->
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
 
-    <!-- link to css  -->
-     <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css" />
   </head>
 
   <body>
     <!-- SIDEBAR -->
-
-    <div class="sidebar">
+    <aside class="sidebar">
       <div>
+        <!-- Logo -->
         <h5>ParkEase</h5>
         <small>Parking Management</small>
 
         <hr style="opacity: 0.2" />
 
-        <nav class="nav flex-column">
+        <!-- Navigation Menu -->
+        <nav class="nav flex-column" aria-label="Sidebar Navigation">
           <a class="nav-link active" href="#">
             <i class="bi bi-grid"></i> Dash
           </a>
@@ -41,25 +42,27 @@
             <i class="bi bi-file-earmark-text"></i> Reports
           </a>
 
-          <a class="nav-link" href="#"> <i class="bi bi-gear"></i> Settings </a>
+          <a class="nav-link" href="#">
+            <i class="bi bi-gear"></i> Settings
+          </a>
         </nav>
       </div>
 
+      <!-- User Info -->
       <div class="user">
-        <img src="https://i.pravatar.cc/40" />
+        <img src="https://i.pravatar.cc/40" alt="User Avatar" />
         <div>
           <div style="font-size: 14px">John Doe</div>
           <small>Attendant #35</small>
         </div>
       </div>
-    </div>
+    </aside>
 
-    <!-- MAIN -->
-
-    <div class="main">
+    <!-- MAIN CONTENT -->
+    <main class="main">
       <!-- TOPBAR -->
-
-      <div class="topbar">
+      <header class="topbar d-flex justify-content-between align-items-center">
+        <!-- Search Box -->
         <div class="search-box">
           <i class="bi bi-search"></i>
           <input
@@ -68,6 +71,7 @@
           />
         </div>
 
+        <!-- Notifications & Shift Time -->
         <div class="d-flex align-items-center gap-3">
           <i class="bi bi-bell"></i>
 
@@ -76,12 +80,11 @@
             08:00 AM - 04:00 PM
           </div>
         </div>
-      </div>
+      </header>
 
-      <!-- CARDS -->
-
-      <div class="row g-3">
-        <div class="col-md-4">
+      <!--  CARDS SECTION  -->
+      <section class="row g-3">
+        <article class="col-md-4">
           <div class="card-box">
             <div class="icon-box">
               <i class="bi bi-car-front"></i>
@@ -92,9 +95,9 @@
               <div class="card-value">150</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="col-md-4">
+        <article class="col-md-4">
           <div class="card-box">
             <div class="icon-box">
               <i class="bi bi-cash"></i>
@@ -105,51 +108,59 @@
               <div class="card-value">UGX 450,000</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="col-md-4">
+        <article class="col-md-4">
           <div class="card-box">
             <div class="icon-box">
               <i class="bi bi-p-square"></i>
             </div>
 
             <div>
-              <div class="card-title">Available Parking slots</div>
+              <div class="card-title">Available Parking Slots</div>
               <div class="card-value">28/150</div>
-              <!-- progress bar -->
+
+              <!-- Progress bar -->
               <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-info progress" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div
+                  class="progress-bar progress-bar-striped bg-info"
+                  role="progressbar"
+                  style="width: 85%"
+                  aria-valuenow="85"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <small style="color: #6c757d">18% Occupancy</small>
             </div>
           </div>
+        </article>
+      </section>
+
+      <!-- OPERATIONS CENTER -->
+      <section class="operations">
+        <h5 class="section-title mt-4">Operations Center</h5>
+
+        <div class="d-flex gap-3 mb-4">
+          <button class="btn btn-info text-white operation-btn">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Register Arrival
+          </button>
+
+          <button class="btn btn-outline-secondary operation-btn">
+            <i class="bi bi-box-arrow-right"></i>
+            Vehicle Sign-out
+          </button>
+
+          <button class="btn btn-outline-secondary operation-btn">
+            <i class="bi bi-printer"></i>
+            Print Daily Summary
+          </button>
         </div>
-      </div>
+      </section>
 
-      <!-- OPERATIONS -->
-
-      <div class="section-title">Operations Center</div>
-
-      <div class="d-flex gap-3 mb-4">
-        <button class="btn btn-info text-white operation-btn">
-          <i class="bi bi-box-arrow-in-right"></i>
-          Register Arrival
-        </button>
-
-        <button class="btn btn-outline-secondary operation-btn">
-          <i class="bi bi-box-arrow-right"></i>
-          Vehicle Sign-out
-        </button>
-
-        <button class="btn btn-outline-secondary operation-btn">
-          <i class="bi bi-printer"></i>
-          Print Daily Summary
-        </button>
-      </div>
-
-      <!-- TABLE -->
-
-      <div class="table-box">
+      <!-- -->
+      <section class="table-box">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h6 class="mb-0">Recent Arrivals</h6>
 
@@ -218,7 +229,12 @@
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="mt-4 mb-2 text-center text-muted" style="font-size: 12px">
+        &copy; 2026 ParkEase. All rights reserved.
+      </footer>
+    </main>
   </body>
 </html>
