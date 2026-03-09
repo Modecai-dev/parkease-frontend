@@ -1,0 +1,189 @@
+/* GLOBAL STYLES */
+body {
+  background: #f3f4f6;
+  font-family: Arial, Segoe UI, sans-serif;
+  color: #374151; /* Dark gray text */
+} 
+
+/* NAVBAR STYLES */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb; 
+  padding: 12px 24px;
+} 
+
+/* LOGO STYLES */
+.logo {
+  width: 32px;
+  height: 32px;
+  background: #ff5400;
+  color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px; 
+  font-weight: 600;
+  margin-right: 8px; 
+}
+
+/* Navbar link styles */
+.nav-link {
+  color: #6b7280; 
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #ff5400;
+}
+
+.nav-link:hover {
+  color: #ff5400; 
+}
+
+/* Utility class for buttons with brand color */
+.alr {
+  background-color: #ff5400;
+} 
+
+/* PAGE TITLE */
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: #6b7280; 
+} 
+
+/* SECTION CARD */
+.section {
+  background: white; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 10px;
+  padding: 20px;
+} 
+
+/* METRIC CARDS */
+.metric {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  position: relative; 
+}
+
+.metric-title {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: #9ca3af; 
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.metric-change {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Icon in the top-right corner of metric card */
+.metric-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-weight: 700;
+  color: #ff5400; 
+}
+
+/* Colors for metric change indicators */
+.up {
+  color: #22c55e; 
+}
+
+.down {
+  color: #ff5400;
+} 
+
+/* TABLE STYLES */
+.table thead {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #9ca3af;
+  background: #f9fafb;
+}
+
+.table td {
+  font-size: 13px;
+}
+
+/* Table cell colors for emphasis */
+.plate {
+  color: #ff5400; 
+  font-weight: 700;
+}
+
+.receipt {
+  color: #6b7280; 
+  font-weight: 600;
+} 
+
+/* SEARCH BAR */
+.search {
+  position: relative; 
+}
+
+.search input {
+  padding-left: 30px; 
+  background: #f9fafb; 
+}
+
+.search i {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: #9ca3af; 
+} 
+
+/* TOTAL BOX */
+.total-box {
+  border: 2px solid #ff5400; 
+  background: #fff7f2; 
+  border-radius: 10px;
+  padding: 16px 28px;
+  text-align: right; 
+}
+
+.total-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #ff5400;
+}
+
+.total-value {
+  font-size: 30px;
+  font-weight: 800; 
+} 
+
+/* FOOTER */
+.footer {
+  margin-top: 40px; 
+  font-size: 11px;
+  color: #9ca3af; 
+}
+
+.status {
+  color: #22c55e; 
+  font-weight: 600;
+}
+
+/* Override default container margins */
+.container {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
