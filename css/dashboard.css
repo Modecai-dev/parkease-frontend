@@ -142,6 +142,10 @@ a {
   color: white;
 }
 
+.a2:hover {
+  color: white;
+}
+
 .operation-btn:hover {
   background-color: #0ea5b7;
   border: none;
