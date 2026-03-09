@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ParkEase - Sign-out & Receipting</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="css/signout.css">
+  </head>
+
+  <body>
+    <!-- HEADER / NAVBAR -->
+
+    <header>
+      <div class="topbar">
+        <!-- BRAND -->
+
+        <div class="brand">
+          <i class="bi bi-p-square-fill"></i>
+          ParkEase - Sign-out & Receipting
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <nav class="d-flex gap-4 flex-grow-1 justify-content-center">
+          <a class="nav-link" href="#">Dashboard</a>
+
+          <a class="nav-link" href="#">In-Vehicle</a>
+
+          <a class="nav-link active" href="#">Out-Vehicle</a>
+
+          <a class="nav-link" href="#">Reports</a>
+        </nav>
+
+        <!-- USER PROFILE -->
+
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-bell"></i>
+
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://i.pravatar.cc/35" class="rounded-circle" />
+
+            <div style="font-size: 12px">
+              <strong>John Doe</strong><br />
+              <span class="text-muted">ATTENDANT #104</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container mt-4">
+      <div class="row">
+        <!-- LEFT SIDE -->
+
+        <section class="col-lg-7">
+          <h5 class="page-title">Process Exit</h5>
+
+          <p class="page-sub mb-3">
+            Scan the ticket or enter the license plate to calculate final
+            charges.
+          </p>
+
+          <!-- SEARCH FORM -->
+
+          <form>
+            <div class="d-flex gap-2 mb-4">
+              <div
+                class="search-box flex-grow-1 d-flex align-items-center px-2"
+              >
+                <i class="bi bi-search text-muted me-2"></i>
+
+                <input
+                  type="text"
+                  class="search-input"
+                  id="searchVehicle"
+                  placeholder="Search Receipt by ID or Plate Number"
+                />
+              </div>
+
+              <button type="submit" class="search-btn">Search</button>
+            </div>
+          </form>
+
+          <!-- VEHICLE DETAILS -->
+
+          <article class="card mb-3">
+            <div class="card-header">
+              <i class="bi bi-car-front me-2"></i>
+              Vehicle & Arrival Details
+            </div>
+
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="label">Driver Name</div>
+                  <div class="value">John Smith</div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="label">Vehicle Type</div>
+                  <div class="value">SUV / Large</div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="label">Arrival Time</div>
+                  <div class="value">Today, 09:15 AM</div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="label">Duration</div>
+                  <div class="value">3h 45m</div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="label">Current Status</div>
+
+                  <span class="status">PENDING SIGN-OUT</span>
+                </div>
+
+                <div class="fee-box">
+                  <small>CALCULATED PARKING FEE</small>
+
+                  <h5>UGX 15,000</h5>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- RECEIVER INFORMATION FORM -->
+
+          <section class="card mb-3">
+            <div class="card-header">
+              <i class="bi bi-person me-2"></i>
+
+              Receiver Information
+            </div>
+
+            <div class="card-body">
+              <form>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="receiverName" class="label">
+                      Receiver Full Name
+                    </label>
+
+                    <input
+                      type="text"
+                      id="receiverName"
+                      class="form-control"
+                      placeholder="As shown on ID"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="phoneNumber" class="label">
+                      Phone Number
+                    </label>
+
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      class="form-control"
+                      placeholder="+256 700 000 000"
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="ninNumber" class="label"> NIN Number </label>
+
+                    <input
+                      type="text"
+                      id="ninNumber"
+                      class="form-control"
+                      placeholder="CF12345678901A"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="gender" class="label"> Gender </label>
+
+                    <select id="gender" class="form-select">
+                      <option>Select Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <!-- PAYMENT METHOD -->
+
+          <section class="card">
+            <div class="card-header">
+              <i class="bi bi-credit-card me-2"></i>
+
+              Payment Method
+            </div>
+
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="payment-option active">
+                    <i class="bi bi-cash-coin me-2"></i>
+
+                    Cash
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="payment-option">
+                    <i class="bi bi-phone me-2"></i>
+
+                    Mobile Money
+                    <small>(Airtel / MTN)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- RECEIPT PREVIEW -->
+
+        <aside class="col-lg-5">
+          <section class="receipt">
+            <div class="receipt-title mb-2">RECEIPT PREVIEW</div>
+
+            <header class="receipt-header">
+              <div class="receipt-logo">P</div>
+
+              <strong>PARKEASE MANAGEMENT</strong><br />
+
+              <small>
+                PLOT 45, KAMPALA ROAD, UG<br />
+
+                TEL: +256 700 000 000
+              </small>
+            </header>
+
+            <table>
+              <tr>
+                <td align="left">Receipt No:</td>
+
+                <td align="right">#PE-8849102</td>
+              </tr>
+
+              <tr>
+                <td align="left">Date:</td>
+
+                <td align="right">Oct 24, 2023</td>
+              </tr>
+
+              <tr>
+                <td align="left">Plate No:</td>
+
+                <td align="right">UAX 123X</td>
+              </tr>
+
+              <tr>
+                <td align="left">Category:</td>
+
+                <td align="right">SUV / Large</td>
+              </tr>
+
+              <tr>
+                <td align="left">Check-in:</td>
+
+                <td align="right">9:15 AM</td>
+              </tr>
+
+              <tr>
+                <td align="left">Duration:</td>
+
+                <td align="right">3h 45m</td>
+              </tr>
+
+              <tr>
+                <td align="left">Receiver:</td>
+
+                <td align="right">John Smith</td>
+              </tr>
+
+              <tr>
+                <td align="left">NIN:</td>
+
+                <td align="right">CF12345678901A</td>
+              </tr>
+
+              <tr>
+                <td colspan="2">
+                  <hr />
+                </td>
+              </tr>
+
+              <tr>
+                <td align="left">
+                  <strong>Total (UGX)</strong>
+                </td>
+
+                <td align="right" class="total">15,000</td>
+              </tr>
+            </table>
+
+            <!-- QR CODE -->
+
+            <div class="qr">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=ParkEaseReceipt"
+                width="120"
+              />
+
+              <div class="mt-2" style="font-size: 11px; letter-spacing: 1px">
+                SCAN TO VERIFY
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+  </body>
+</html>
